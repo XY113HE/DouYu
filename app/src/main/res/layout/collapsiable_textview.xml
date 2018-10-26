@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/desc_tv"
+        android:textSize="14dp"
+        android:paddingTop="9dp"
+        android:text="爱手动我安徽省地哦啊后来是降低欧舒丹佛事"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical" />
+        <TextView
+            android:id="@+id/desc_op_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/desc_tv"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="全文"
+            android:textColor="@color/red2"
+            android:textSize="14dp"
+            android:visibility="gone" />
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="main_hint_bg">#EEEEEE</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="gray">#666666</color>
+    <color name="pop_view_bg">#B2000000</color>
+    <color name="share_cancel_btn_bg">#C0C0C0</color>
+    <color name="main_theme_bg_color">#EEEEEE</color>
+    <color name="main_text_color">#4A4A4A</color>
+    <color name="setting_pop_text_color">#333333</color>
+    <color name="setting_hint_color">#9B9B9B</color>
+    <color name="setting_pop_bg">#00000000</color>
+    <color name="red">#FF2515</color>
+    <color name="red2">#FF2B14</color>
+    <color name="update_gray">#D8D8D8</color>
+    <color name="update_red">#E8514D</color>
+    <color name="update_progress_bg">#E1E1E1</color>
+</resources>

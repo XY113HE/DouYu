@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+            <ImageView
+                android:id="@+id/return_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="1dp"
+                android:padding="6dp"
+                android:src="@drawable/about_us_return_btn"/>
+            <TextView
+                style="@style/horizontal_layout"
+                android:layout_weight="1"
+                android:text="关于我们"
+                android:textSize="16dp"
+                android:gravity="center"
+                android:textColor="@color/black"/>
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="1dp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/setting_hint_color" />
+        <TextView
+            android:id="@+id/about_us_content"
+            android:layout_marginTop="45dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about_us_text"
+            android:textColor="@color/setting_hint_color"/>
+
+        <TextView
+            android:id="@+id/cooperation_info"
+            android:layout_marginTop="45dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/cooperation_info"
+            android:textColor="@color/setting_hint_color"/>
+    </LinearLayout>
+</layout>
