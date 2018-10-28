@@ -32,12 +32,12 @@ public class DouYuApplication extends Application{
 
 
     //微信
-    public static final String WX_APP_ID = "wxec54f3eb23c8fce8";
-    public static final String WX_APP_SECRET = "7ba05b8c7f81e8a4b23f04f6baff7916";
+    public static final String WX_APP_ID = "wx30e72bcc9a16ffca";
+    public static final String WX_APP_SECRET = "55d2bca8a2967af27fe7f7838c2f4ef9";
 
     //新浪微博
-    public static final String SINA_APP_KEY = "4000126916";
-    public static final String SINA_APP_SECRET = "6f77b57d52a086fb9cd811dc5a5b4dc2";
+    public static final String SINA_APP_KEY = "24722306";
+    public static final String SINA_APP_SECRET = "c55a1c1641b53cd6c0e048dbcca01cd6";
 
     //QQ分享
     public static final String QQ_APP_ID = "1107828083";
