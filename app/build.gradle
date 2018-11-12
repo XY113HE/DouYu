@@ -122,7 +122,7 @@ dependencies {
     implementation files('libs/umeng-share-sina-simplify-6.9.3.jar')
     implementation files('libs/umeng-share-QQ-simplify-6.9.3.jar')
     //动态权限申请
-//    implementation 'gun0912.ted:tedpermission:2.1.0'
+    //    implementation 'gun0912.ted:tedpermission:2.1.0'
     implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
     //okhttp请求log
     compile 'com.squareup.okhttp3:logging-interceptor:3.4.2'
@@ -130,4 +130,5 @@ dependencies {
     implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
 
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
 }

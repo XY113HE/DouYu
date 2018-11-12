@@ -134,6 +134,26 @@
                     android:layout_marginLeft="15dp"
                     android:textColor="@color/setting_pop_text_color"/>
             </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/setting_login_test_layout"
+                android:layout_width="match_parent"
+                android:layout_height="74dp">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/setting_about_us_icon"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="登录测试"
+                    android:textSize="14dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/setting_pop_text_color"/>
+            </LinearLayout>
         </LinearLayout>
         <View
             android:id="@+id/setting_close_area"

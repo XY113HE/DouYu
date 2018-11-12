@@ -179,7 +179,7 @@ public class MainTextAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         }
 
         private void bindItem(final int position){
-            itemBinding.itemContent.setText(data.get(position).getBody().replace("\n", ""));
+            itemBinding.itemContent.setText(data.get(position).getBody().replace("\n", "").replace("<p>", "").replace("</p>", ""));
             itemBinding.itemLikeAmount.setText("");
             itemBinding.itemShareAmount.setText("");
 
@@ -205,6 +205,8 @@ public class MainTextAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             } else {
                 ImageBindingUtils.loadImg(itemBinding.itemLikeBtn, R.drawable.item_like_btn);
             }
+
+//            itemBinding.itemContent.setText(data.get(position).getAuthor());
 
             //TODO 点击关注变色，这个有数据才可以处理View复用，可根据focus字段判断显示具体颜色
             RxUtils.setOnClick(itemBinding.itemLikeLayout, new Consumer() {

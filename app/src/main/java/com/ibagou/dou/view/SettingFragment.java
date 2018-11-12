@@ -1,5 +1,6 @@
 package com.ibagou.dou.view;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.os.Bundle;
@@ -22,6 +23,8 @@ import com.ibagou.dou.util.AppHook;
 import com.ibagou.dou.util.GlideCacheUtil;
 import com.ibagou.dou.util.RxUtils;
 import com.ibagou.dou.util.Tools;
+import com.tencent.mm.opensdk.modelmsg.SendAuth;
+import com.tencent.mm.opensdk.openapi.IWXAPI;
 
 /**
  * Created by liumingyu on 2018/8/22.
@@ -110,6 +113,21 @@ public class SettingFragment extends BaseFragment{
             public void accept(Object o) throws Exception {
                 setAutoDownSwitchOn(false);
                 ((BaseActivity)AppHook.get().currentActivity()).editor.putBoolean(DouYuApplication.AUTO_DOWNLOAD, false).commit();
+            }
+        });
+
+        RxUtils.setOnFreeClick(mBinding.settingLoginTestLayout, new Consumer() {
+            @Override
+            public void accept(Object o) throws Exception {
+                IWXAPI iwxapi = DouYuApplication.getInstance().getIWXApi();
+                if (!iwxapi.isWXAppInstalled()) {
+                    Toast.makeText(getContext(), "未安装微信, 请安装微信后登录", Toast.LENGTH_SHORT).show();
+                } else {
+                    final SendAuth.Req req = new SendAuth.Req();
+                    req.scope = "snsapi_user info";
+                    req.state = "wechat_sdk_demo_test";
+                    iwxapi.sendReq(req);
+                }
             }
         });
     }

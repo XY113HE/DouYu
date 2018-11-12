@@ -7,6 +7,8 @@ import android.content.SharedPreferences;
 
 import com.ibagou.dou.network.api.DouYuNetApi;
 import com.ibagou.dou.util.DatabaseHelper;
+import com.tencent.mm.opensdk.openapi.IWXAPI;
+import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 import com.umeng.commonsdk.UMConfigure;
 import com.umeng.socialize.PlatformConfig;
 
@@ -48,6 +50,7 @@ public class DouYuApplication extends Application{
     public static final String UM_APP_KEY = "5bcd6df5f1f5563762000153";
 
     private boolean wifiEnable = false;
+    private IWXAPI iwxapi;
 
     {
         PlatformConfig.setWeixin(WX_APP_ID, WX_APP_SECRET);
@@ -74,6 +77,13 @@ public class DouYuApplication extends Application{
         filter.addAction("android.net.wifi.WIFI_STATE_CHANGED");
         filter.addAction("android.net.wifi.STATE_CHANGE");
         registerReceiver(mNetworkChangeListener, filter);
+
+        iwxapi = WXAPIFactory.createWXAPI(this, WX_APP_ID, true);
+        iwxapi.registerApp(WX_APP_ID);
+    }
+
+    public IWXAPI getIWXApi(){
+        return iwxapi;
     }
 
 

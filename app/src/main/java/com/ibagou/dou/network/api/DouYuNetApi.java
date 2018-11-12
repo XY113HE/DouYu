@@ -48,4 +48,10 @@ public interface DouYuNetApi {
     @FormUrlEncoded
     Observable<BaseBean> addArticle(@Field("body") String body, @Field("author") String author);
 
+
+    //登录
+    @POST(DOUYU_VERSION + "wechat-open/login")
+    @FormUrlEncoded
+    Observable<BaseBean> wxLogin(@Field("code") String code);
+
 }

@@ -10,6 +10,7 @@ import android.support.annotation.Nullable;
 import android.view.KeyEvent;
 import android.view.Window;
 
+import com.ibagou.dou.util.UmengUtils;
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 import com.umeng.analytics.MobclickAgent;
 
@@ -49,13 +50,13 @@ public abstract class BaseActivity<DataBindingType extends ViewDataBinding> exte
     @Override
     protected void onPause() {
         super.onPause();
-        MobclickAgent.onPause(this);
+        UmengUtils.onPauseToActivity(this);
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        MobclickAgent.onResume(this);
+        UmengUtils.onResumeToActivity(this);
 
     }
 

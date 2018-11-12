@@ -141,6 +141,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> implements M
                     .subscribe(new Consumer<CheckVersionBean>() {
                         @Override
                         public void accept(CheckVersionBean checkVersionBean) throws Exception {
+                            Log.e("lmy", "accept: " + new Gson().toJson(checkVersionBean));
                             if(checkVersionBean.getData().getNew_version().equals("YES")){
 
                                 //初始化更新Dialog
