@@ -590,9 +590,8 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> implements M
                     @Override
                     public void accept(Boolean aBoolean) throws Exception {
                         if(aBoolean){
-                            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
-                            UMImage umImage = new UMImage(MainActivity.this, bitmap);
-                            UMWeb web = new UMWeb("http://www.kali.org.cn");
+                            UMImage umImage = new UMImage(MainActivity.this, "http://dou.ibagou.com/static/imgs/72.png");
+                            UMWeb web = new UMWeb("http://dou.ibagou.com/app");
                             web.setTitle("逗娱 - 分享快乐");//标题
                             web.setThumb(umImage);  //缩略图
                             web.setDescription(shareContent);//描述
